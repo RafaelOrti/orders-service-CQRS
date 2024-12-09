@@ -20,12 +20,12 @@ export class GetOrdersByCompanyNameHandler implements IQueryHandler<GetOrdersByC
     // Filtrar órdenes por companyName y clientName utilizando el método findAll del repositorio
     const orders = await this.orderRepository.findAll(filter);
 
-    //console.log("orders",orders)
-    //console.log("orders",filter)
+    // console.log("orders",orders)
+    // console.log("orders",filter)
 
-    if (!orders || orders.length === 0) {
-      throw new NotFoundException('No orders found for the specified company and client');
-    }
+    // if (!orders || orders.length === 0) {
+    //   throw new NotFoundException('No orders found for the specified company and client');
+    // }
 
     return orders;
   }

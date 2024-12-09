@@ -63,7 +63,7 @@ export class OrderController {
     @Query('companyName') companyName: string,
     @Query('clientName') clientName: string
   ) {
-    //console.log("Entra en company endpoint con companyName:", companyName, "y clientName:", clientName);
+    // console.log("Entra en company endpoint con companyName:", companyName, "y clientName:", clientName);
     return this.queryBus.execute(new GetOrdersByCompanyNameQuery(companyName, clientName));
   }
 
